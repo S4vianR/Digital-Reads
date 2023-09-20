@@ -2,8 +2,9 @@
 export default {
   content: [
     "./index.html",
-    "./src/pages/**/*.{html,js}",
-    "./src/**/*.{html,js}"],
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/**/*.html",
+  ],
   theme: {
     extend: {},
     screens: {
