@@ -2,65 +2,63 @@
 <html lang="MX">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="../styles/biblioteca.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
-    <link rel="manifest" href="../../favicon/site.webmanifest">
-    <!-- JS -->
+  <link href="../styles/biblioteca.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+  <link rel="manifest" href="../../favicon/site.webmanifest">
+  <!-- JS -->
   <script type="module" src="../js/navbar.js" defer></script>
-    <title>Biblioteca</title>
+  <title>Biblioteca</title>
 </head>
 
 <body class="bg-[#fffeef]">
-    <nav class="border-b border-b-slate-800">
-        <div>
-          <div class="flex flex-row flex-1 justify-between items-center px-5">
-            <img src="../../flat-layout_digital-reads-logo (2).png" alt="digital-reads-logo" class="xs:h-12 md:h-14">
-            <div class="">
-              <ul class="flex-row flex-1 gap-7 text-xl xs:hidden lg:flex">
-                <li>
-                  <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
-                    href="../../index.html">Inicio</a>
-                </li>
-                <li>
-                  <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
-                    href="biblioteca.html">Biblioteca</a>
-                </li>
-                <li>
-                  <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
-                    href="#">Perfil</a>
-                </li>
-              </ul>
+  <nav class="border-b border-b-slate-800">
+    <div>
+      <div class="flex flex-row flex-1 justify-between items-center px-5">
+        <img src="../../flat-layout_digital-reads-logo (2).png" alt="digital-reads-logo" class="xs:h-12 md:h-14">
+        <div class="">
+          <ul class="flex-row flex-1 gap-7 text-xl xs:hidden lg:flex">
+            <li>
+              <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                href="../../index.html">Inicio</a>
+            </li>
+            <li>
+              <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                href="biblioteca.html">Biblioteca</a>
+            </li>
+            <li>
+              <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                href="#">Perfil</a>
+            </li>
+          </ul>
+        </div>
+        <a href="./inicio-sesion.html" class="xs:hidden lg:block">
+          <button
+            class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700">
+            <div class="flex flex-row flex-1 gap-1">
+              <span>Login</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path
+                  d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+              </svg>
             </div>
-            <a href="./inicio-sesion.html" class="xs:hidden lg:block">
-              <button
-                class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700">
-                <div class="flex flex-row flex-1 gap-1">
-                  <span>Login</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path
-                      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
-                    </path>
-                  </svg>
-                </div>
-              </button>
-            </a>
-            <a href="#" class="sm:block lg:hidden">
-              <button id="mobile-menu-trigger">
-                <div class="flex flex-col flex-1">
-                  <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open"/>
-                  <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close"/>
-                  <span>Menu</span>
-                </div>
-              </button>
-            </a>
-          </div>
-          <!--
+          </button>
+        </a>
+        <a href="#" class="w-fit -mr-3 sm:block lg:hidden">
+          <button id="mobile-menu-trigger" class="flex flex-col flex-1 w-9 text-sm">
+            <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open" />
+            <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close" />
+            <span class="text-md">Menu</span>
+          </button>
+        </a>
+      </div>
+      <!--
                 Dropdown menu, show/hide based on menu state.
     
                 Entering: "transition ease-out duration-100"
@@ -70,61 +68,61 @@
                   From: "transform opacity-100 scale-100"
                   To: "transform opacity-0 scale-95"
               -->
-          <div
-            class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-            role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="mobile-menu">
-            <!-- Active: "bg-gray-100", Not Active: "" -->
-            <a href="/index.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
-              id="mobile-menu-item-0">Inicio</a>
-            <a href="./biblioteca.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
-              id="mobile-menu-item-1">Biblioteca</a>
-            <a href="#" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
-              id="mobile-menu-item-2">Perfil</a>
-            <a href="./inicio-sesion.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
-              id="user-menu-item-2">Login</a>
-          </div>
+      <div
+        class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="mobile-menu">
+        <!-- Active: "bg-gray-100", Not Active: "" -->
+        <a href="/index.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="mobile-menu-item-0">Inicio</a>
+        <a href="./biblioteca.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="mobile-menu-item-1">Biblioteca</a>
+        <a href="#" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="mobile-menu-item-2">Perfil</a>
+        <a href="./inicio-sesion.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="user-menu-item-2">Login</a>
+      </div>
+    </div>
+  </nav>
+  <main class="flex flex-col">
+    <header>
+      <h1 class="text-3xl text-center pt-10">
+        Bienvenido a tu <span class="text-[#ff6f00]">biblioteca</span>
+      </h1>
+    </header>
+    <section class="flex flex-1 gap-5 items-center mt-8 xs:flex-col xs:p-5 lg:flex-row lg:p-12">
+      <article class="flex gap-5 items-center bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
+        <a href="../books/how-to-build-a-house.html" class="hover:opacity-80 hover:cursor-pointer" target="_blank">
+          <img src="../../book-covers/How-to-build-a-house.jpg" alt="How-to-build-a-house-cover" class="w-64">
+        </a>
+        <div class="w-64">
+          <h3 class="text-2xl font-bold">How to build a house</h3>
+          <p>
+            El autor, M. Viollet-le-Duc, presenta en su obra "Histoire d'une Maison" un enfoque práctico
+            y fascinante sobre el desafío de construir una casa moderna que satisfaga diversas
+            necesidades. Utiliza su amplia experiencia y conocimiento para abordar este problema
+            complejo, proporcionando una discusión detallada de cada etapa del proceso. El texto incluye
+            ilustraciones que facilitan la comprensión, lo que lo hace accesible incluso para quienes
+            tienen menos conocimientos en el tema.
+          </p>
         </div>
-      </nav>
-    <main class="flex flex-col">
-        <header>
-            <h1 class="text-3xl text-center pt-10">
-                Bienvenido a tu <span class="text-[#ff6f00]">biblioteca</span>
-            </h1>
-        </header>
-        <section class="flex flex-1 gap-5 items-center mt-8 xs:flex-col xs:p-5 lg:flex-row lg:p-12">
-            <article class="flex gap-5 items-center bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
-                <a href="../books/how-to-build-a-house.html" class="hover:opacity-80 hover:cursor-pointer"
-                    target="_blank">
-                    <img src="../../book-covers/How-to-build-a-house.jpg" alt="How-to-build-a-house-cover" class="w-64">
-                </a>
-                <div class="w-64">
-                    <h3 class="text-2xl font-bold">How to build a house</h3>
-                    <p>
-                        El autor, M. Viollet-le-Duc, presenta en su obra "Histoire d'une Maison" un enfoque práctico
-                        y fascinante sobre el desafío de construir una casa moderna que satisfaga diversas
-                        necesidades. Utiliza su amplia experiencia y conocimiento para abordar este problema
-                        complejo, proporcionando una discusión detallada de cada etapa del proceso. El texto incluye
-                        ilustraciones que facilitan la comprensión, lo que lo hace accesible incluso para quienes
-                        tienen menos conocimientos en el tema.
-                    </p>
-                </div>
-            </article>
-            <article class="flex flex-row gap-5 items-center w-fit bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
-                <a href="../books/romeo-julieta.html">
-                    <img src="../../book-covers/romeo-julieta.jpg" alt="romeo-julieta" class="w-64">
-                </a>
-                <div class="w-64">
-                    <h3 class="text-2xl font-bold">Romeo y Julieta</h3>
-                    <p>
-                        Romeo y Julieta es una tragedia de William Shakespeare. Cuenta la historia de dos jóvenes
-                        enamorados que, a pesar de la oposición de sus familias, rivales entre sí, deciden casarse de
-                        forma clandestina y vivir juntos; sin embargo, la presión de esa rivalidad y una serie de
-                        fatalidades conducen al suicidio de los dos amantes.
-                    </p>
-                </div>
-            </article>
-        </section>
-    </main>
+      </article>
+      <article
+        class="flex flex-row gap-5 items-center w-fit bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
+        <a href="../books/romeo-julieta.html">
+          <img src="../../book-covers/romeo-julieta.jpg" alt="romeo-julieta" class="w-64">
+        </a>
+        <div class="w-64">
+          <h3 class="text-2xl font-bold">Romeo y Julieta</h3>
+          <p>
+            Romeo y Julieta es una tragedia de William Shakespeare. Cuenta la historia de dos jóvenes
+            enamorados que, a pesar de la oposición de sus familias, rivales entre sí, deciden casarse de
+            forma clandestina y vivir juntos; sin embargo, la presión de esa rivalidad y una serie de
+            fatalidades conducen al suicidio de los dos amantes.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 
 </html>
