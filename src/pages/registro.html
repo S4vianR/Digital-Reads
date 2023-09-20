@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/registro.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <title>Registro de usuario</title>
+</head>
+
+<body>
+    <nav>
+        <!-- Volver al inicio -->
+        <a href="../../index.html"
+            class="flex flex-row justify-start items-center mt-3 hover:fill-green-800 hover:text-green-800 hover:underline hover:underline-offset-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 ml-5">
+                <path
+                    d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+                </path>
+            </svg>
+            <span>Volver al inicio</span>
+        </a>
+    </nav>
+    <main class="mt-32">
+        <form id="miFormulario" onsubmit="verificarContraseñas();" action="registro.php" method="POST">
+            <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+                <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <!-- https://tailwindui.com/img/logos/mark.svg?color=green&shade=600 -->
+                    <img class="mx-auto h-14 w-auto" src="../../flat-layout_digital-reads-logo (2).png"
+                        alt="Digital Reads">
+                    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">¡Registrate
+                        con
+                        nosotros!
+                    </h2>
+                </div>
+                <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+                    <form class="space-y-6" action="#" method="POST">
+                        <div>
+                            <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo
+                                electrónico</label>
+                            <div class="mt-2">
+                                <input id="email" title="Escribe tu correo electrónico" name="email" type="email"
+                                    autocomplete="email" required
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <label for="password"
+                                    class="block text-sm font-medium leading-6 text-gray-900">Contraseña</label>
+                                <!-- <div class="text-sm">
+                        <a href="#" class="font-semibold text-green-700 hover:text-green-600">¿Olvidaste tu contraseña?</a>
+                      </div> -->
+                            </div>
+                            <div class="mt-2">
+                                <input id="password" title="Escribe tu contraseña" name="password" type="password"
+                                    autocomplete="current-password" required
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Confirma tu contraseña -->
+                            <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Confirma tu
+                                contraseña</label>
+                            <div class="mt-2">
+                                <input id="password" title="Confirma tu contraseña" name="password" type="password"
+                                    autocomplete="current-password" required
+                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" onclick="verificarContraseñas()"
+                                class="flex w-full justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                Iniciar sesión
+                            </button>
+                        </div>
+                    </form>
+                    <p class="mt-10 text-center text-sm text-gray-500">
+                        ¿Ya tienes una cuenta?
+                        <a href="./inicio-sesion.html"
+                            class="font-semibold leading-6 text-green-700 hover:text-green-600">¡Inicia sesión!</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
+
+<script>
+    /* Comparar contraseñas */
+    function verificarContraseñas() {
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+
+        if (password !== confirm_password) {
+            alert("Las contraseñas no coinciden. Por favor, inténtalo de nuevo.");
+            return false;
+        } else if (password.length < 8) {
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            return false;
+        } else {
+            alert("Contraseña válida.");
+            return true;
+        }
+    }
+
+    document.getElementById("miFormulario").addEventListener("submit", function (event) {
+        if (!verificarContraseñas()) {
+            // Cancela el evento si no se cumple la condición
+            window.location.reload();
+        }
+    });
+
+
+</script>

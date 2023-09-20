@@ -5,13 +5,16 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="/src/styles/main.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../src/styles/main.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
   <link rel="manifest" href="./favicon/site.webmanifest">
+  <!-- JS -->
+  <script type="module" src="./src/js/navbar.js" defer></script>
   <title>Digital Reads</title>
 </head>
 
@@ -21,14 +24,14 @@
       <div class="flex flex-row flex-1 justify-between items-center px-5">
         <img src="./flat-layout_digital-reads-logo (2).png" alt="digital-reads-logo" class="w-56">
         <div class="">
-          <ul class="flex flex-row flex-1 gap-7 text-xl">
+          <ul class="flex-row flex-1 gap-7 text-xl xs:hidden lg:flex">
             <li>
               <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
-                href="#">Inicio</a>
+                href="./index.html">Inicio</a>
             </li>
             <li>
               <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
-                href="#">Biblioteca</a>
+                href="./src/pages/biblioteca.html">Biblioteca</a>
             </li>
             <li>
               <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
@@ -36,7 +39,7 @@
             </li>
           </ul>
         </div>
-        <a href="#">
+        <a href="./src/pages/inicio-sesion.html" class="xs:hidden lg:block">
           <button
             class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700">
             <div class="flex flex-row flex-1 gap-1">
@@ -49,6 +52,38 @@
             </div>
           </button>
         </a>
+        <a href="#" class="sm:block lg:hidden">
+          <button id="mobile-menu-trigger">
+            <div class="flex flex-col flex-1">
+              <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open" />
+              <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close" />
+              <span>Menu</span>
+            </div>
+          </button>
+        </a>
+      </div>
+      <!--
+            Dropdown menu, show/hide based on menu state.
+
+            Entering: "transition ease-out duration-100"
+              From: "transform opacity-0 scale-95"
+              To: "transform opacity-100 scale-100"
+            Leaving: "transition ease-in duration-75"
+              From: "transform opacity-100 scale-100"
+              To: "transform opacity-0 scale-95"
+          -->
+      <div
+        class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="mobile-menu">
+        <!-- Active: "bg-gray-100", Not Active: "" -->
+        <a href="../../index.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="mobile-menu-item-0">Inicio</a>
+        <a href="./src/pages/biblioteca.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem"
+          tabindex="-1" id="mobile-menu-item-1">Biblioteca</a>
+        <a href="#" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="mobile-menu-item-2">Perfil</a>
+        <a href="./src/pages/inicio-sesion.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="user-menu-item-2">Login</a>
       </div>
     </div>
   </nav>
@@ -62,7 +97,7 @@
         </div>
       </div>
     </section>
-    <section class="mx-[25%] my-[15%] h-[50vh] w-[50vw]">
+    <section class="h-[50vh] xs:my-[25%] xs:mx-[8%] md:mx-[25%] md:my-[15%] xs:w-[85svw] md:w-[50vw]">
       <article class="flex flex-col justify-center items-center bg-white p-8 shadow-lg rounded-lg">
         <h2 class="text-2xl font-bold mb-4 border-b-2 border-gray-300 w-full text-center">¡Próximamente en digi...!</h2>
         <p class="text-gray-700 text-lg leading-relaxed">
