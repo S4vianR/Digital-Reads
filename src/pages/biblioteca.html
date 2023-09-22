@@ -89,38 +89,9 @@
         Bienvenido a tu <span class="text-[#ff6f00]">biblioteca</span>
       </h1>
     </header>
-    <section class="flex flex-1 gap-5 items-center mt-8 xs:flex-col xs:p-5 lg:flex-row lg:p-12">
-      <article class="flex gap-5 items-center bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
-        <a href="../books/how-to-build-a-house.html" class="hover:opacity-80 hover:cursor-pointer" target="_blank">
-          <img src="../../book-covers/How-to-build-a-house.jpg" alt="How-to-build-a-house-cover" class="w-64">
-        </a>
-        <div class="w-64">
-          <h3 class="text-2xl font-bold">How to build a house</h3>
-          <p>
-            El autor, M. Viollet-le-Duc, presenta en su obra "Histoire d'une Maison" un enfoque práctico
-            y fascinante sobre el desafío de construir una casa moderna que satisfaga diversas
-            necesidades. Utiliza su amplia experiencia y conocimiento para abordar este problema
-            complejo, proporcionando una discusión detallada de cada etapa del proceso. El texto incluye
-            ilustraciones que facilitan la comprensión, lo que lo hace accesible incluso para quienes
-            tienen menos conocimientos en el tema.
-          </p>
-        </div>
-      </article>
-      <article
-        class="flex flex-row gap-5 items-center w-fit bg-[#cca195] rounded-xl p-5 xs:flex-col sm:flex-row sm:w-full md:w-fit">
-        <a href="../books/romeo-julieta.html">
-          <img src="../../book-covers/romeo-julieta.jpg" alt="romeo-julieta" class="w-64">
-        </a>
-        <div class="w-64">
-          <h3 class="text-2xl font-bold">Romeo y Julieta</h3>
-          <p>
-            Romeo y Julieta es una tragedia de William Shakespeare. Cuenta la historia de dos jóvenes
-            enamorados que, a pesar de la oposición de sus familias, rivales entre sí, deciden casarse de
-            forma clandestina y vivir juntos; sin embargo, la presión de esa rivalidad y una serie de
-            fatalidades conducen al suicidio de los dos amantes.
-          </p>
-        </div>
-      </article>
+    <section class="flex flex-1 gap-5 items-center mt-2 xs:flex-col xs:p-5 lg:flex-row lg:p-12">
+      <div id="books"></div>
+      <script src="../js/index.jsx" type="module"></script>
     </section>
   </main>
 </body>
