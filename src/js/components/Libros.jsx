@@ -4,7 +4,7 @@ import React from "react";
 
 const Libros = ({ libro }) => {
   return (
-    <div className="flex flex-col flex-1 bg-white p-8 rounded-lg shadow-lg xs:h-[40rem] md:h-[47rem]">
+    <div className="flex flex-col flex-1 bg-white p-8 rounded-lg shadow-lg xs:h-[40rem] md:h-[60rem]">
       <h5 className="text-2xl font-bold text-gray-900 mb-2">{libro.titulo}</h5>
       <h6 className="text-xl font-medium text-gray-900 mb-2">{libro.autor}</h6>
       <p className="text-gray-700 text-base">{libro.descripcion}</p>
@@ -13,7 +13,7 @@ const Libros = ({ libro }) => {
       <img
         src={`https:${libro.portada}`}
         alt={libro.titulo}
-        className="self-center xs:mt-4 xs:h-[20rem] md:h-96 md:mt-0"
+        className="self-center xs:mt-4 xs:h-[20rem] md:mt-0 md:w-3/4 md:h-[40rem]"
       />
       <a
         href={`https:${libro.url}`}
