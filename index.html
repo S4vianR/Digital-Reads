@@ -1,13 +1,11 @@
 <!doctype html>
-<html lang="mx">
+<html lang="MX">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- CSS -->
   <link rel="stylesheet" href="./src/styles/main.css">
-
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
@@ -15,11 +13,16 @@
   <link rel="manifest" href="./favicon/site.webmanifest">
   <!-- JS -->
   <script type="module" src="./src/js/navbar.js" defer></script>
+  <style scoped>
+    body {
+      background-color: rgb(226 232 240);
+    }
+  </style>
   <title>Digital Reads</title>
 </head>
 
-<body class="bg-slate-200">
-  <nav class="border-b border-b-slate-800">
+<body>
+  <nav style="border-bottom: 1px solid #2d3748;">
     <div>
       <div class="flex flex-row flex-1 justify-between items-center px-5">
         <img src="./flat-layout_digital-reads-logo (2).png" alt="digital-reads-logo" class="xs:h-12 md:h-14">
@@ -36,6 +39,10 @@
             <li>
               <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
                 href="#">Perfil</a>
+            </li>
+            <li>
+              <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                href="./src/pages/about-us.html">Quienes somos</a>
             </li>
           </ul>
         </div>
@@ -54,22 +61,12 @@
         </a>
         <a href="#" class="w-fit -mr-3 sm:block lg:hidden">
           <button id="mobile-menu-trigger" class="flex flex-col flex-1 w-9 text-sm">
-            <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open"/>
-            <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close"/>
+            <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open" />
+            <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close" />
             <span class="text-md">Menu</span>
           </button>
         </a>
       </div>
-      <!--
-            Dropdown menu, show/hide based on menu state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          -->
       <div
         class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
         role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1" id="mobile-menu">
@@ -80,6 +77,8 @@
           tabindex="-1" id="mobile-menu-item-1">Biblioteca</a>
         <a href="#" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
           id="mobile-menu-item-2">Perfil</a>
+        <a href="./src/pages/about-us.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+          id="user-menu-item-2">Quienes somos</a>
         <a href="./src/pages/inicio-sesion.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem"
           tabindex="-1" id="user-menu-item-2">Login</a>
       </div>
@@ -105,9 +104,14 @@
           ¡Explora, aprende y sueña con Digital Reads hoy mismo!
         </p>
       </article>
+      <article class="flex flex-col justify-center items-center mt-8">
+        <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700 flex flex-row justify-center items-center text-white bg-slate-900 rounded-lg px-3 py-1 hover:bg-slate-700"
+          href="https://github.com/S4vianR/digital-reads" target="_blank">
+          <span>Repositorio</span>
+          <img src="./github.svg" alt="github" class="xs:h-6 xs:w-6 lg:h-8 lg:w-8">
+        </a>
+      </article>
     </section>
-
-
   </main>
 </body>
 

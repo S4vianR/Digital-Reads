@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/ubicacion.css">
+    <style scoped>
+        body {
+            background-color: #b1ab9b;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav style="margin-top: 0.75rem;">
+        <!-- Volver a la pagina anterior -->
+        <a href="./about-us.html"
+            class="flex flex-row justify-start items-center w-fit ml-5 rounded-lg p-2 bg-yellow-700 text-white hover:bg-yellow-600">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="xs:w-6 xs:h-6 lg:w-4 lg:h-4">
+                <path
+                    d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"
+                    fill="rgba(255,255,255,1)"></path>
+            </svg>
+            <span class="xs:text-lg lg:text-sm">Volver a la pagina anterior</span>
+        </a>
+    </nav>
+    <div class="flex justify-center items-center">
+        <main class="xs:mt-16 lg:mt-8 xs:3/4 lg:w-1/2 flex flex-col gap-5 mb-5">
+            <div class="flex flex-col justify-center items-center bg-white rounded-lg shadow-lg p-5">
+                <!-- 3.3.3. Página de ubicación. Incluir dirección, teléfono y correo electrónico. -->
+                <header>
+                    <h1 class="text-xl font-semibold">
+                        Ubicación
+                    </h1>
+                </header>
+                <div class="flex flex-col mt-2 gap-2 justify-center items-center">
+                    <p>
+                        Dirección: Av. Tecnológico 1340, Fuentes del Valle, 32500 Cd Juárez, Chih.
+                        <iframe
+                            class="w-full h-96 border border-red-300 rounded-lg"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.847800651794!2d-106.4213704!3d31.720052300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75dc249fd3e4b%3A0x58a769357165487b!2sTechnological%20Institute%20of%20Ciudad%20Ju%C3%A1rez!5e0!3m2!1sen!2smx!4v1697174343895!5m2!1sen!2smx"
+                            width="600" height="450" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </p>
+                    <p>
+                        Teléfono: 656 888 555 11
+                    </p>
+                    <p>
+                        Correo electrónico:
+                        <a href="mailto:DigitalReads@gmail.com"
+                            class="text-blue-500 hover:text-blue-700">DigitalReads@gmail.com</a>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-5">
+                <!-- 3.3.4. Página de contacto. Incluir formulario para enviar comentarios y/o preguntas. -->
+                <header class="mt-5">
+                    <h1 class="text-xl font-semibold text-center">
+                        ¿Quejas, sugerencias o comentarios? ¡Contáctanos!
+                    </h1>
+                </header>
+                <form action="#" class="flex flex-col mt-2 gap-2 justify-center items-center">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="border-2 border-gray-300 rounded-lg p-1">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" name="correo" id="correo" class="border-2 border-gray-300 rounded-lg p-1">
+                    <label for="comentario">Comentario</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10"
+                        class="border-2 border-gray-300 rounded-lg p-1"></textarea>
+                    <button type="submit"
+                        class="bg-yellow-700 text-white rounded-lg p-2 hover:bg-yellow-600">Enviar</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

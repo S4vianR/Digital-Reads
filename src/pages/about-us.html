@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/about-us.css">
+    <!-- JS -->
+    <script type="module" src="../js/navbar.js" defer></script>
+    <title>Quienes somos</title>
+    <style scoped>
+        body {
+            background-color: #FAF9F6;            
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="border-bottom: 1px solid #2d3748;">
+        <div>
+            <div class="flex flex-row flex-1 justify-between items-center px-5">
+                <img src="../../flat-layout_digital-reads-logo (2).png" alt="digital-reads-logo"
+                    class="xs:h-12 md:h-14">
+                <div class="">
+                    <ul class="flex-row flex-1 gap-7 text-xl xs:hidden lg:flex">
+                        <li>
+                            <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                                href="../../index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                                href="../pages/biblioteca.html">Biblioteca</a>
+                        </li>
+                        <li>
+                            <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                                href="#">Perfil</a>
+                        </li>
+                        <li>
+                            <a class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700"
+                                href="./about-us.html">Quienes somos</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="../pages/inicio-sesion.html" class="xs:hidden lg:block">
+                    <button
+                        class="transition-color hover:border-b-2 hover:border-b-slate-600 hover:translate-y-0 focus:border-b-2 focus:border-b-slate-700">
+                        <div class="flex flex-row flex-1 gap-1">
+                            <span>Login</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                </path>
+                            </svg>
+                        </div>
+                    </button>
+                </a>
+                <a href="#" class="w-fit -mr-3 sm:block lg:hidden">
+                    <button id="mobile-menu-trigger" class="flex flex-col flex-1 w-9 text-sm">
+                        <img src="../../menu-3-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-open" />
+                        <img src="../../close-fill.svg" alt="hamburger-menu" id="mobile-menu-icon-close" />
+                        <span class="text-md">Menu</span>
+                    </button>
+                </a>
+            </div>
+            <div class="absolute right-0 z-10 mt-1 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1"
+                id="mobile-menu">
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+                <a href="/index.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+                    id="mobile-menu-item-0">Inicio</a>
+                <a href="./src/pages/biblioteca.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem"
+                    tabindex="-1" id="mobile-menu-item-1">Biblioteca</a>
+                <a href="#" class="block px-4 py-5 text-lg text-gray-700" role="menuitem" tabindex="-1"
+                    id="mobile-menu-item-2">Perfil</a>
+                <a href="./src/pages/inicio-sesion.html" class="block px-4 py-5 text-lg text-gray-700" role="menuitem"
+                    tabindex="-1" id="user-menu-item-2">Login</a>
+            </div>
+        </div>
+    </nav>
+    <div class="flex justify-center items-center">
+        <main class="mt-24 bg-slate-200 border-2 border-slate-400 p-5 w-1/2">
+            <header class="text-center">
+                <h1 class="text-2xl font-bold">
+                    Conocenos
+                </h1>
+            </header>
+            <div class="mt-5 text-lg flex flex-col gap-5">
+                <p>
+                    Digital Reads somos una empresa dedicada al manejo de libros de licencia libre, nuestro objetivo es que
+                    todas las personas que quieran o requieran de un libro en cualquier momento lo puedan obtener, tales
+                    son; en
+                    sus momentos libres, para sus estudios o trabajo, puedan contar con nosotros ara localizarlo o contar
+                    con
+                    una alternativa para enriquecer sus estudios
+                </p>
+                <div class="flex xs:flex-col gap-5 lg:flex-row">
+                    <p class="bg-slate-100 p-5">
+                        Misión: Nuestra misión a corto plazo es ser una página reconocida como biblioteca para todas aquellas
+                        personas que necesiten contar con un libro en cualquier momento de su día, independientemente si es para
+                        la escuela o trabajo.
+                    </p>
+                    <p class="bg-slate-100 p-5">
+                        Visión: Nuestra visión es ser una de las paginas con mas catálogo de libros gratis disponibles en el
+                        mundo,
+                        para fortalecer la lectura en todas las personas independientemente de la edad, condición etc.
+                    </p>
+                </div>
+            </div>
+            <p class="text-end mt-2">
+                Tienes alguna pregunta? <a href="../pages/ubicacion.html" class="text-blue-600 underline underline-offset-4 hover:text-blue-800">Visitanos</a>
+            </p>
+        </main>
+    </div>
+</body>
+
+</html>
