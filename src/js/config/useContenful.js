@@ -1,5 +1,5 @@
 import { createClient } from 'contentful'
-import config from './config/config.js';
+import config from './config.js';
 
 const spaceId = config.spaceId;
 const accessToken = config.accessToken;

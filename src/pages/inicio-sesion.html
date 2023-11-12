@@ -37,20 +37,24 @@
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <!-- https://tailwindui.com/img/logos/mark.svg?color=green&shade=600 -->
-        <img class="mx-auto h-14 w-auto" src="../../flat-layout_digital-reads-logo (2).png" alt="Digital Reads">
+        <a href="" id="linkEasterEgg">
+          <img class="mx-auto h-14 w-auto hover:cursor-pointer" src="../../flat-layout_digital-reads-logo (2).png"
+            alt="Digital Reads">
+        </a>
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Inicia sesión en tu
           cuenta
         </h2>
       </div>
 
-      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-lg md:w-full md:max-w-xl lg:w-full lg:max-w-2xl">
+      <div class="flex flex-col gap-10 mt-10 sm:mx-auto sm:w-full sm:max-w-lg md:w-full md:max-w-xl lg:w-full lg:max-w-2xl">
         <form class="space-y-6" action="#" method="POST">
           <div>
             <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo electrónico</label>
             <div class="mt-2">
-              <input id="email" title="Escribe tu correo electrónico" name="email" type="email" autocomplete="email"
-                required
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <input id="email" name="email" type="email" autocomplete="email" required
+                placeholder="Escribe tu correo electrónico"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
+              <span class="hidden collapse" id="correoSpan"></span>
             </div>
           </div>
 
@@ -62,20 +66,36 @@
               </div> -->
             </div>
             <div class="mt-2">
-              <input id="password" title="Escribe tu contraseña" name="password" type="password"
-                autocomplete="current-password" required
-                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <input id="password" name="password" type="password" autocomplete="current-password" required
+                placeholder="Escribe tu contraseña" minlength="6" maxlength="18"
+                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6">
+              <span class="hidden collapse" id="passwordSpan"></span>
             </div>
           </div>
 
           <div>
-            <button type="submit"
-              class="flex w-full justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-              Iniciar sesión
-            </button>
+            <input type="submit" value="Iniciar sesión"
+              class="flex w-full justify-center rounded-md bg-green-700 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:cursor-pointer">
+            </input>
           </div>
         </form>
-        <div
+        <div id="anuncioDiv">
+          <div class="bg-slate-100 p-6 flex flex-col justify-center">
+            <div class="flex flex-row-reverse justify-between mb-2">
+              <input type="button" value="X"
+                class="bg-slate-400 text-white rounded-full w-6 h-6 hover:cursor-pointer hover:bg-slate-600"
+                id="anuncioCloseButton" />
+              <span>Anuncio</span>
+            </div>
+            <div class="bg-[#cbeecb] border border-green-400 p-3 flex flex-row-reverse justify-center items-center">
+              <p class="mx-10">
+                Sumérgete en la sabiduría digital. Tu biblioteca en línea, siempre a tu alcance.
+              </p>
+              <img src="../../Digital_Reads_logo.png" alt="digital-reads-logo" class="w-24 aspect-square">
+            </div>
+          </div>
+        </div>
+        <!-- <div
           class="flex flex-1 flex-col justify-center items-center mt-3 gap-2 md:flex-row md:justify-normal md:items-center">
           <a href="#" class="h-fit w-64 md:w-full text-sm bg-black text-slate-50 hover:bg-slate-700 rounded-lg">
             <button class="">
@@ -103,13 +123,122 @@
             </button>
           </a>
         </div>
-        <!-- <p class="mt-10 text-center text-sm text-gray-500">
+        <p class="mt-10 text-center text-sm text-gray-500">
           ¿No tienes una cuenta?
           <a href="./registro.html" class="font-semibold leading-6 text-green-700 hover:text-green-600">¡Registrate!</a>
-        </p> -->
+        </p>
+      </div> -->
       </div>
-    </div>
   </main>
+  <script type="text/javascript">
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const linkEasterEgg = document.getElementById('linkEasterEgg')
+
+    /* OnBlur */
+    email.addEventListener('blur', (event) => {
+      let correoSpan = document.getElementById('correoSpan');
+      let validity = email.validity;
+      console.log(validity);
+      if (validity.valueMissing) {
+        email.setCustomValidity('Por favor, escribe una dirección de correo.');
+        correoSpan.textContent = email.validationMessage;
+        correoSpan.classList.remove('hidden');
+        correoSpan.classList.remove('collapse');
+        correoSpan.classList.add('block');
+        correoSpan.classList.add('visible');
+        correoSpan.classList.add('text-red-500');
+      }
+      else if (validity.typeMismatch) {
+        email.setCustomValidity('Por favor, escribe una dirección de correo válida.');
+        correoSpan.textContent = email.validationMessage;
+        correoSpan.classList.remove('hidden');
+        correoSpan.classList.remove('collapse');
+        correoSpan.classList.add('block');
+        correoSpan.classList.add('visible');
+        correoSpan.classList.add('text-red-500');
+      } else {
+        email.setCustomValidity('');
+        correoSpan.classList.remove('block');
+        correoSpan.classList.remove('visible');
+        correoSpan.classList.add('hidden');
+        correoSpan.classList.add('collapse');
+      }
+    });
+
+    password.addEventListener('blur', (event) => {
+      let passwordSpan = document.getElementById('passwordSpan');
+      let validity = password.validity;
+      console.log(validity);
+      if (validity.valueMissing) {
+        password.setCustomValidity('Por favor, escribe una contraseña.');
+        passwordSpan.textContent = password.validationMessage;
+        passwordSpan.classList.remove('hidden');
+        passwordSpan.classList.remove('collapse');
+        passwordSpan.classList.add('block');
+        passwordSpan.classList.add('visible');
+        passwordSpan.classList.add('text-red-500');
+      }
+      else if (validity.tooShort || validity.tooLong) {
+        password.setCustomValidity('Por favor, escribe una con los caracteres adecuados.');
+        passwordSpan.textContent = password.validationMessage;
+        passwordSpan.classList.remove('hidden');
+        passwordSpan.classList.remove('collapse');
+        passwordSpan.classList.add('block');
+        passwordSpan.classList.add('visible');
+        passwordSpan.classList.add('text-red-500');
+      } else {
+        password.setCustomValidity('');
+        passwordSpan.classList.remove('block');
+        passwordSpan.classList.remove('visible');
+        passwordSpan.classList.add('hidden');
+        passwordSpan.classList.add('collapse');
+      }
+    });
+
+    /* OnFocus */
+    email.addEventListener('focus', (event) => {
+      // Cambiar el color del outline
+      email.style.outlineColor = '#10B981';
+
+    });
+
+    password.addEventListener('focus', (event) => {
+      // Cambiar el color del outline
+      password.style.outlineColor = '#10B981';
+    });
+
+    /* MouseOver */
+    email.addEventListener('mouseover', (event) => {
+      // Agregar un title
+      email.title = 'Escribe tu correo electrónico';
+    });
+
+    password.addEventListener('mouseover', (event) => {
+      // Agregar un title
+      password.title = "La contraseña debe tener entre 6 y 18 caracteres."
+    });
+
+    /* MouseOut */
+    email.addEventListener('mouseout', (event) => {
+      // Quita el title
+      email.title = '';
+    });
+
+    password.addEventListener('mouseout', (event) => {
+      // Quita el title
+      password.title = '';
+    });
+
+    /* OnClick */
+    // Easter egg en el linkEasterEgg
+    linkEasterEgg.addEventListener('click', () => {
+      // Cambiar el href
+      linkEasterEgg.href = '../pages/easter-egg.html';
+      linkEasterEgg.target = '_self';
+    });
+  </script>
+  <script src="../js/js/anuncio-inicio-sesion.js"></script>
 </body>
 
 </html>

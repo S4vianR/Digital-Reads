@@ -44,8 +44,7 @@
                 <div class="flex flex-col mt-2 gap-2 justify-center items-center">
                     <p>
                         Dirección: Av. Tecnológico 1340, Fuentes del Valle, 32500 Cd Juárez, Chih.
-                        <iframe
-                            class="w-full h-96 border border-red-300 rounded-lg"
+                        <iframe class="w-full h-96 border border-red-300 rounded-lg"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.847800651794!2d-106.4213704!3d31.720052300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75dc249fd3e4b%3A0x58a769357165487b!2sTechnological%20Institute%20of%20Ciudad%20Ju%C3%A1rez!5e0!3m2!1sen!2smx!4v1697174343895!5m2!1sen!2smx"
                             width="600" height="450" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -68,18 +67,94 @@
                 </header>
                 <form action="#" class="flex flex-col mt-2 gap-2 justify-center items-center">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="border-2 border-gray-300 rounded-lg p-1">
+                    <input type="text" name="nombre" id="nombreText" class="border-2 border-gray-300 rounded-lg p-1"
+                        placeholder="Escribe tu nombre" required>
+                    <span id="nombreSpan" class="hidden collapse"></span>
                     <label for="correo">Correo electrónico</label>
-                    <input type="email" name="correo" id="correo" class="border-2 border-gray-300 rounded-lg p-1">
+                    <input type="email" name="correo" id="correoText" class="border-2 border-gray-300 rounded-lg p-1"
+                        placeholder="Escribe tu correo" required>
+                    <span id="correoSpan" class="hidden collapse"></span>
                     <label for="comentario">Comentario</label>
-                    <textarea name="comentario" id="comentario" cols="30" rows="10"
-                        class="border-2 border-gray-300 rounded-lg p-1 xs:w-3/4 lg:w-full"></textarea>
+                    <textarea name="comentario" id="comentarioTextArea" cols="30" rows="10"
+                        class="border-2 border-gray-300 rounded-lg p-1 xs:w-3/4 lg:w-full"
+                        placeholder="Escribe algun comentario que tengas!" minlength="20" maxlength="500" required></textarea>
+                    <span id="contadorCaracteres" class="self-end mx-2 text-slate-500">0/500</span>
+                    <span id="comentarioSpan" class="hidden collapse"></span>
                     <button type="submit"
                         class="bg-yellow-700 text-white rounded-lg p-2 hover:bg-yellow-600">Enviar</button>
                 </form>
             </div>
         </main>
     </div>
+    <script type="text/javascript">
+        const nombreText = document.getElementById('nombreText');
+        const correoText = document.getElementById('correoText');
+        const comentarioTextArea = document.getElementById('comentarioTextArea');
+        const nombreSpan = document.getElementById('nombreSpan');
+        const correoSpan = document.getElementById('correoSpan');
+        const comentarioSpan = document.getElementById('comentarioSpan');
+        const contadorCaracteres = document.getElementById('contadorCaracteres');
+
+        nombreText.addEventListener('blur', () => {
+            let validity = nombreText.validity;
+            if (validity.valueMissing) {
+                nombreText.setCustomValidity('El nombre es requerido');
+                nombreSpan.textContent = nombreText.validationMessage;
+                nombreSpan.classList.remove('hidden', 'collapse');
+                nombreSpan.classList.add('block', 'visible', 'text-red-500');
+            } else if (!isNaN(parseInt(nombreText.value))) {
+                nombreText.setCustomValidity('El nombre debe contener solo letras');
+                nombreSpan.textContent = nombreText.validationMessage;
+                nombreSpan.classList.remove('hidden', 'collapse');
+                nombreSpan.classList.add('block', 'visible', 'text-red-500');
+            } else {
+                nombreSpan.classList.add('hidden', 'collapse');
+                nombreSpan.classList.remove('block', 'visible', 'text-red-500');
+            }
+        });
+
+        correoText.addEventListener('blur', () => {
+            let validity = correoText.validity;
+            console.log(validity);
+            if (validity.valueMissing) {
+                correoText.setCustomValidity('El correo es requerido');
+                correoSpan.textContent = correoText.validationMessage;
+                correoSpan.classList.remove('hidden', 'collapse');
+                correoSpan.classList.add('block', 'visible', 'text-red-500');
+            } else if (validity.typeMismatch) {
+                correoText.setCustomValidity('introduce un correo valido');
+                correoSpan.textContent = correoText.validationMessage;
+                correoSpan.classList.remove('hidden', 'collapse');
+                correoSpan.classList.add('block', 'visible', 'text-red-500');
+            } else {
+                correoSpan.classList.add('hidden', 'collapse');
+                correoSpan.classList.remove('block', 'visible', 'text-red-500');
+            }
+        });
+
+        comentarioTextArea.addEventListener('blur', () => {
+            let validity = comentarioTextArea.validity;
+            if (validity.valueMissing) {
+                comentarioTextArea.setCustomValidity('El comentario es requerido');
+                comentarioSpan.textContent = comentarioTextArea.validationMessage;
+                comentarioSpan.classList.remove('hidden', 'collapse');
+                comentarioSpan.classList.add('block', 'visible', 'text-red-500');
+            } else if (validity.tooShort) {
+                comentarioTextArea.setCustomValidity('El comentario debe tener al menos 20 caracteres');
+                comentarioSpan.textContent = comentarioTextArea.validationMessage;
+                comentarioSpan.classList.remove('hidden', 'collapse');
+                comentarioSpan.classList.add('block', 'visible', 'text-red-500');
+            } else {
+                comentarioSpan.classList.add('hidden', 'collapse');
+                comentarioSpan.classList.remove('block', 'visible', 'text-red-500');
+            }
+        });
+
+        // Agregar contador de caracteres
+        comentarioTextArea.addEventListener('input', () => {
+            contadorCaracteres.textContent = `${comentarioTextArea.value.length}/500`;
+        });
+    </script>
 </body>
 
 </html>

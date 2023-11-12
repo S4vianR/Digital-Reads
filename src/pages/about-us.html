@@ -12,7 +12,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/about-us.css">
     <!-- JS -->
-    <script type="module" src="../js/navbar.js" defer></script>
+    <script type="module" src="../js/js/navbar.js" defer></script>
     <title>Quienes somos</title>
     <style scoped>
         body {
@@ -87,44 +87,69 @@
     </nav>
     <div class="flex justify-center items-center">
         <main class="mt-24 bg-slate-200 border-2 border-slate-400 p-5 xs:w-3/4 lg:w-1/2">
-            <header class="text-center">
-                <h1 class="text-2xl font-bold">
-                    Conocenos
-                </h1>
-            </header>
-            <div class="mt-5 text-lg flex flex-col gap-5">
-                <p>
-                    Digital Reads somos una empresa dedicada al manejo de libros de licencia libre, nuestro objetivo es
-                    que
-                    todas las personas que quieran o requieran de un libro en cualquier momento lo puedan obtener, tales
-                    son; en
-                    sus momentos libres, para sus estudios o trabajo, puedan contar con nosotros ara localizarlo o
-                    contar
-                    con
-                    una alternativa para enriquecer sus estudios
-                </p>
-                <div class="flex xs:flex-col gap-5 lg:flex-row">
-                    <p class="bg-slate-100 p-5">
-                        Misión: Nuestra misión a corto plazo es ser una página reconocida como biblioteca para todas
-                        aquellas
-                        personas que necesiten contar con un libro en cualquier momento de su día, independientemente si
-                        es para
-                        la escuela o trabajo.
-                    </p>
-                    <p class="bg-slate-100 p-5">
-                        Visión: Nuestra visión es ser una de las paginas con mas catálogo de libros gratis disponibles
-                        en el
-                        mundo,
-                        para fortalecer la lectura en todas las personas independientemente de la edad, condición etc.
-                    </p>
+            <section id="anuncioDiv">
+                <div class="bg-slate-300 p-6 flex flex-col justify-center">
+                    <div class="flex flex-row justify-between mb-2">
+                        <input type="button" value="X"
+                            class="bg-slate-600 text-white rounded-full w-6 h-6 hover:cursor-pointer hover:bg-slate-700"
+                            id="anuncioCloseButton" />
+                        <span class="font-semibold">Anuncio</span>
+                    </div>
+                    <div class="bg-[#AFE1AF] border border-green-600 p-3 flex flex-row justify-center items-center">
+                        <p class="mx-3 p-5">
+                            Explora, lee y aprende en nuestra biblioteca digital. Regístrate para acceder a miles de
+                            libros y recursos educativos en línea. El conocimiento está a un clic de distancia.
+                        </p>
+                        <img src="../../Digital_Reads_logo.png" alt="digital-reads-logo" class="w-24 aspect-square">
+                    </div>
                 </div>
-            </div>
-            <p class="text-end mt-2">
-                Tienes alguna pregunta? <a href="../pages/ubicacion.html"
-                    class="text-blue-600 underline underline-offset-4 hover:text-blue-800">Visitanos</a>
-            </p>
+            </section>
+            <section>
+                <header class="text-center">
+                    <h1 class="text-2xl font-bold">
+                        Conocenos
+                    </h1>
+                </header>
+                <div class="mt-5 text-lg flex flex-col gap-5">
+                    <p>
+                        Digital Reads somos una empresa dedicada al manejo de libros de licencia libre, nuestro objetivo
+                        es
+                        que
+                        todas las personas que quieran o requieran de un libro en cualquier momento lo puedan obtener,
+                        tales
+                        son; en
+                        sus momentos libres, para sus estudios o trabajo, puedan contar con nosotros ara localizarlo o
+                        contar
+                        con
+                        una alternativa para enriquecer sus estudios
+                    </p>
+                    <div class="flex xs:flex-col gap-5 lg:flex-row">
+                        <p class="bg-slate-100 p-5">
+                            Misión: Nuestra misión a corto plazo es ser una página reconocida como biblioteca para todas
+                            aquellas
+                            personas que necesiten contar con un libro en cualquier momento de su día,
+                            independientemente si
+                            es para
+                            la escuela o trabajo.
+                        </p>
+                        <p class="bg-slate-100 p-5">
+                            Visión: Nuestra visión es ser una de las paginas con mas catálogo de libros gratis
+                            disponibles
+                            en el
+                            mundo,
+                            para fortalecer la lectura en todas las personas independientemente de la edad, condición
+                            etc.
+                        </p>
+                    </div>
+                </div>
+                <p class="text-end mt-2">
+                    Tienes alguna pregunta? <a href="../pages/ubicacion.html"
+                        class="text-blue-600 underline underline-offset-4 hover:text-blue-800">Visitanos</a>
+                </p>
+            </section>
         </main>
     </div>
+    <script src="../js/js/anuncio-about-us.js"></script>
 </body>
 
 </html>
